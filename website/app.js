@@ -91,7 +91,27 @@ function addZeros(n) {
 
 // Displays real-time clock.
 
-setInterval(displayTime, 1000);
+setInterval(displayTime);
+
+// Function to set background image based on time of day.
+
+function setBackground() {
+	let date = new Date();
+	let hours = date.getHours();
+	let app = document.getElementById('app');
+	if (hours < 12) {
+		//morning
+		app.style.backgroundImage = "url('day4.jpg')";
+	} else if (hours < 18) {
+		//afternoon
+		app.style.backgroundImage = "url('noon1.jpg')";
+	} else {
+		//night
+		app.style.backgroundImage = "url('night4.jpg')";
+	}
+}
+
+setBackground()
 
 // Complete promise chain to get, post, and updateUI.
 
@@ -113,4 +133,4 @@ function getPost() {
 
 // Event for app to function on-click.
 
-document.getElementById("generate").addEventListener("click", getPost);
+document.getElementById("submit").addEventListener("click", getPost);

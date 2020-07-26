@@ -1,25 +1,30 @@
 /* Styling for the Weather Journal App */
 
+* {
+	margin: 0px auto;
+}
+
 body {
 	background: white;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app {
-	display: grid;
-	grid-auto-rows: minmax(135px, auto);
-	/* grid-template-columns: */
+	display: flex;
+	flex-direction: column;
+		/* grid-template-columns: */
 	height: 100vh;
-	background-image: url("Vegas_Background.jpg");
+	background-size: cover;
 	color: white;
 	justify-content: center;
+	flex-direction: column;
 	grid-gap: 1em;
 	font-size: 20px;
 	font-family: 'Oswald', sans-serif;
 }
 
 .holder {
-	
+	margin: 0px auto;
 }
 
 .entry {
@@ -28,8 +33,13 @@ body {
 	border-radius: 5px;
 }
 
-#entryHolder {
+.journalEntry {
+	width: 35%;
+	height: 200px;
+}
 
+#entryHolder {
+	
 }
 
 #date {
@@ -47,8 +57,9 @@ body {
 #time {
 	font-size: 70px;
 }
+
 .headline {
-	margin-top: 3vh;
+	margin-top: 50px;
 }
 
 .title {
@@ -57,32 +68,103 @@ body {
 
 .submitBox {
 	height: 40px;
+	width: 100%;
 }
 
-#generate {
+.feelings {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#submit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 30px;
-	width: 100%;
+	width: 15%;
+	margin: 0px auto;
 	font-weight: bold;
-	background-color: black;
 	opacity: 0.75;
 	color: white;
-	border-radius: 5px
 }
 
-#generate:hover {
+#submit:hover {
+	cursor: pointer;
+	background-color: black;
+	background-opacity: 0.75;
+	transition: 1s ease;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.zipCode {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.75;
+}
+
+#zip {
+	background-color: black;
+	opacity: 0.75;
+	transition: 1s ease;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#zip:hover {
+	background-color: black;
 	opacity: 0.85;
-	color: yellow;
+	transition: 1s ease;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#feelings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+	font-weight: bold;
+	opacity: 0.75;
+	color: white;
+}
+
+#feelings:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	transition: 1s ease;
+	border: 1px solid black;
+}
+
+.spanField {
+	color: white;
+}
+
+.spanField:hover {
+
 }
 
 /* Basic Styling to Override Default For Basic HTML Elements */
 
 label{
-	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	font-size: 27px;
+	margin: 0px auto;
 }
 
 input {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 60px;
 	width: 320px;
 	background: black;
@@ -96,8 +178,9 @@ input {
 }
 
 input: hover {
-	box-shadow: 5px 5px 5px #808080;
-	transition: 0.25s;
+	background-color: black;
+	background-opacity: 0.75;
+	transition: 1s ease;
 }
 
 h1 {
